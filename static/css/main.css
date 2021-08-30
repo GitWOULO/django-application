@@ -1,0 +1,130 @@
+.container{
+    margin-bottom: 10%;
+    width: 100%;    
+}
+
+.col-md-3{ 
+    padding: 1%;
+    background-color: rgb(87, 69, 69);
+    margin: auto;
+    
+}
+
+.product-box:hover{
+    background-color: white;
+    transform: scale(1.09,1.03);
+    padding: 3%;
+    cursor: pointer;
+}
+.product-box{    
+    margin: auto;
+    padding: 4%;
+    background-color: bisque;    
+    transition: 300ms;
+}
+
+.product-name{   
+    margin-left: 5%;
+    font-size: 15px; 
+    text-align: right;        
+}
+
+.nav{
+    display: flex;
+}
+
+.image{
+
+    width: 250px;
+    height: 195px;
+    float: top;
+    transition: 500ms; 
+    margin-top: 0; 
+    border-radius: 5%;   
+}
+
+.image:hover{
+    background-color: rgb(103, 214, 88);    
+    border: salmon 2px solid;  
+    transform: scale(1,.8); 
+    width: 254px;
+    height: 205px;
+    }
+
+.description{
+    width: 260px;    
+    word-wrap: break-word;
+}
+.ibox-content{
+    width: 270px;
+    height: 320px; 
+    border-radius: 5%;   
+}
+
+body{ 
+    padding: 0%;
+    margin: 0%;
+    background-color: rgba(75, 13, 133, 0.267);    
+}
+
+
+#total-orders{
+    background-color: #4cb4c7;
+}
+#orders-delivered{
+    background-color: #7abecc;
+}
+
+#orders-pending{
+    background-color: #7CD1C0;
+}
+.liste_commande{
+    background-color: white;      
+}
+.liste_client{
+    background-color: white;      
+}
+.btn-outline{
+    float: right;
+    font-size: 15px;
+    margin-bottom: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.btn-outline:hover{
+    background-color: rgb(160, 149, 226);
+}
+
+.div-supprimer{
+    font-size: 20px;
+    padding: 5%;
+    width: 50%;
+    margin-left: 25%; 
+    margin-bottom: 5%;   
+    background-color: rgb(231, 226, 226);
+    border-radius: 15px;
+    box-shadow: 0px 3px rgb(187, 186, 186);
+    transition: 1000ms;
+}
+
+.div-supprimer p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.div-supprimer a,input{
+    width: 35%;
+    margin-left: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.suppr{
+    width: 90%;
+    
+    margin-left: 5%;
+    background-color: white;
+    text-align: center;
+    padding: 5%;
+    box-shadow: 0px 4px rgb(212, 209, 209);
+    border-radius: 8px;
+}

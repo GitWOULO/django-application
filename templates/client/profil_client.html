@@ -1,0 +1,76 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="container-client">
+	<div id="client">
+		<div class="action-client">
+			<div class="card card-body">
+				<h5>Client:</h5>
+				<hr>
+				<p>{{client.nom}} </p>
+				<a class="btn btn-primary" href="{% url 'modifier_client' client.id %} ">Modifier
+					le
+					Client</a>
+				<a class="btn btn-danger"
+					href="{% url 'supprimer_client' client.id %} ">Supprimer
+					le Client</a>
+
+			</div>
+		</div>
+
+		<div class="info-client">
+			<div class="info-client-c">
+				<h5>Informations</h5>
+				<hr>
+				<p><span>Nom :</span> {{client.nom}} </p>
+				<p><span>Telephone:</span> {{client.telephone}} </p>
+				<p><span>Email:</span>{{client.email}} </p>
+				<p><span>Date création:</span>{{client.date_creation}} </p>
+
+			</div>
+		</div>
+
+		<div class="nombre-commande-client">
+			<div class="nombre-commande-client-c">
+				<h5>Total des Commandes pour {{client.nom}} </h5>
+			<hr>
+			<h1 style="text-align: center;padding: 10px">{{nombre_commande}} </h1>
+			</div>
+		</div>
+	</div>
+	<div title="Chercher les commandes selon le STATUS & PRODUIT" id="filtre-commande">
+		<form method="get">
+			{{myFilter.form}}
+			<button class="btn btn-primary" type="submit">Filtrer</button>
+		</form>
+	</div>
+
+	<div>
+		<div class="titre">
+			<p>Liste des commandes effectuées par {{client.nom}} </p>
+		</div>
+		<div class="commande-client">			
+				<p>Produit</p>
+				<p>Categorie</p>
+				<p>Date de Commande</p>
+				<p>Status</p>
+				<p>Mise à Jour</p>
+				<p>Supprimer</p>			
+		</div>
+		<div>
+			{% for commande in commandes %}
+			<div class="corp-commande">
+				<p>{{commande.produit}}</p>
+				<p><a href=" #">{{commande.produit.categorie}} </a></p>
+				<p>{{commande.date_creation}}</p>
+				<p>{{commande.status}}</p>
+				<p><a class="btn btn-info" href="{% url 'modifier_commande' commande.id %} ">Modifier</a></p>
+				<p><a class="btn btn-danger" href="{% url 'supprimer_commande' commande.id %}">Supprimer</a></p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+{% endblock content%}

@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form">
+        {% for form in form %}
+        <div title="Renseigner ce champ << {{form.label}} >>" class="content_form">
+            <span class="label">{{form.label}} :</span>
+            <div class="form_fields">              
+                {{form}}
+                               
+            </div>
+        </div>
+        <hr>
+        {% endfor %}  
+        <a class="btn btn-warning" href="{% url 'listing_commande' %} ">Annuler</a>
+        <input class="btn btn-success" title="Valider votre formulaire" type="submit" value="Modifier">
+    </div>
+
+</form>
+{% endblock %}

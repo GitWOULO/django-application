@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<div class="div-supprimer">
+    <div class="suppr">
+        <form action="{% url 'supprimer_client' item.id %}" method="POST">
+            {% csrf_token %}
+            <p>Voulez-vous supprimer ce client de la liste ?</p>
+            <a class="btn btn-warning" href="{% url 'profil_client' item.id %} ">Annuler</a>            
+            <input class="btn btn-danger" type="submit" name="Confirmer" value="Confirmer">
+        </form>
+        <hr>
+    </div>
+</div>
+{% endblock %}

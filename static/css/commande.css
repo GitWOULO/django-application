@@ -1,0 +1,16 @@
+.liste_commande .titre{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    padding: 1%;
+}
+
+#ajouter_commande{
+    width: 20%;
+    margin-left: 25%;    
+}
+
+#ajouter_commande .btn-primary{
+    
+    padding: 5%;
+}

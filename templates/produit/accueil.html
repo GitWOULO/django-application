@@ -1,0 +1,45 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+		{% for produit in produits %}
+        <div class="col-md-3">
+			
+            <div class="ibox">
+				
+                <div class="ibox-content product-box">
+                    <div class="product-imitation">
+                        <a href="">
+							<img class="image" src="{{produit.picture}}" alt="{{produit.titre}}">
+						</a>
+                    </div>
+                    <div class="product-desc">
+                        <div>
+                            <a href="{% url 'modifier_produit' produit.id %} " class="product-name">{{produit.titre}} </a>
+                        </div>
+                        <span class="product-price">
+                            Prix : {{produit.prix}} MAD 
+                            <div>
+                                <i><del>{{produit.prix}} MAD</del></i>
+                            </div>
+                        </span>
+                        
+                        
+
+                        
+                        <div class="m-t text-righ">                        
+                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details <i
+                                    class="fa fa-long-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+				
+            </div>
+			
+        </div>
+		{% endfor %}    
+</div>
+
+{% endblock content%}
+{"mode":"full","isActive":false}

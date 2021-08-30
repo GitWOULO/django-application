@@ -1,0 +1,34 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="liste_commande">            
+    <div>        
+		<div class="titre">
+			<p>Toutes les commandes effectuées par les client</p>
+            <p id="ajouter_commande"><a class="btn btn-primary  btn-sm btn-block" href="{% url 'ajouter_commande' %} ">Ajouter une commande</a></p>                     
+		</div>        
+		<div class="commande-client">			
+				<p>Produit</p>
+				<p>Categorie</p>
+				<p>Date de Commande</p>
+				<p>Status</p>
+				<p>Mise à Jour</p>
+				<p>Supprimer</p>			
+		</div>
+		<div>
+			{% for commande in commandes %}
+			<div class="corp-commande">
+				<p>{{commande.produit}}</p>
+				<p><a href=" #">{{commande.produit.categorie}} </a></p>
+				<p>{{commande.date_creation}}</p>
+				<p>{{commande.status}}</p>
+				<p><a class="btn btn-info" href="{% url 'modifier_commande' commande.id %} ">Modifier</a></p>
+				<p><a class="btn btn-danger" href="{% url 'supprimer_commande' commande.id %}">Supprimer</a></p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="liste_client">
+	<div class="titre"><a  href="{% url 'creer_client' %} ">Créer un client</a></div>
+	<div class="entete">
+		<p>Nom</p>
+		<p>Téléphone</p>
+		<p>Détails</p>
+	</div>
+	{% for client in clients %}	
+	<div title="Client  << {{client.nom}} >> " class="liste">
+		<p>{{client.nom}}</p>
+		<p>{{client.telephone}}</p>
+		<p><a title="Voir plus d'information sur << {{client.nom}} >> " class="btn btn-info" href="{% url 'profil_client' client.id %}">Détails</a></p>
+	</div>
+	<hr>
+	{% endfor %}
+</div>
+
+
+{% endblock content%}

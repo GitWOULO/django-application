@@ -1,0 +1,51 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<br>
+<div class="row">
+	<div class="col-lg-12>
+		<h5>Clients:</h5>
+		<hr>
+		<div class=" card card-body">
+		<a class="btn btn-primary  btn-sm btn-block" href="">Créer Un Client</a>
+		<table class="table table-sm">
+			<tr>
+				<th></th>
+				<th>Clients</th>
+				<th>Commandes</th>
+			</tr>
+
+		</table>
+	</div>
+</div>
+
+<div class="col-lg-12>
+		<h5>Les 5 Dernières Comamndes</h5>
+		<hr>
+		<div class=" card card-body">
+	<a class="btn btn-primary  btn-sm btn-block" href="">Ajouter une Commande</a>
+	<table class="table table-sm">
+		<tr>
+			<th>Produit</th>
+			<th>Date de la commande</th>
+			<th>Status</th>
+			<th>Mise à Jour</th>
+			<th>Supprimer</th>
+		</tr>
+
+	</table>
+</div>
+{% for produit in produits %}
+<div class="col-sm-4 text-center">
+	<a href="">
+	  <img class="img-responsive" src="{{produit.picture}}" alt="{{produit.titre}}">
+	</a>
+	<h3><a href="">{{produit.titre}} </a></h3>
+	<h4>{{produit.prix}} </h4>
+	
+	<p>{{produit.description}} </p>
+</div>
+{% endfor %}
+
+{% endblock content%}
+{"mode":"full","isActive":false}

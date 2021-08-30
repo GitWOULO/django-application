@@ -1,0 +1,28 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form">
+        {% for form in form %}
+        <div title="Renseigner ce champ << {{form.label}} >>" class="content_form">
+            <span class="label">{{form.label}} :</span>
+            <div class="form_fields">
+
+                {% if form.label in 'Description' %}
+                <p class="description-produit">
+                    {{form}}
+                </p>
+                {% else %}
+                {{form}}
+                {% endif %}                
+            </div>
+
+        </div>
+        <hr>
+        {% endfor %}        
+        <input title="Valider votre formulaire" id="submit" type="submit" value="Envoyer">
+    </div>
+
+</form>
+{% endblock %}

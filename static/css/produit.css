@@ -1,0 +1,80 @@
+.form{
+    
+    width: 50%;
+    margin-bottom: 10px;
+    margin-left: 25%;
+    padding-bottom: 2%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.form a{
+    width: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.form hr{
+    height: 1px;
+    background-color: black;
+}
+
+.description-produit{       
+    word-wrap: break-word;    
+    font-size: 20px;
+    font-style: italic;
+}
+.form_fields{
+    margin: 1%;
+}
+
+.content_form input{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    width: 100%;
+    height: 30px;    
+}
+
+.content_form{
+    display: flex;
+    padding: 1%;
+   
+}
+
+
+
+.label{
+    width: 30%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 1%;
+}
+
+#submit{
+    width: 20%;
+    height: 40px;
+    margin-left: 42%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 20px;
+    border-radius: 10%;
+    background-color: rgb(164, 207, 120);
+}
+#submit:hover{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: 300ms;
+    background-color: chartreuse;
+}
+
+select{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 170%;
+    height: 30px;
+}
